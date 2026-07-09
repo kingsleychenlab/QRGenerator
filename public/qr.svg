@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <rect width="24" height="24" rx="5" fill="#0a0a0f"/>
+  <!-- QR finder pattern -->
+  <rect x="5" y="5" width="9" height="9" rx="1.5" fill="none" stroke="#ffb020" stroke-width="2"/>
+  <rect x="8" y="8" width="3" height="3" fill="#ffb020"/>
+  <!-- scattered modules -->
+  <rect x="16.5" y="5" width="2.5" height="2.5" fill="#ffb020"/>
+  <rect x="16.5" y="9" width="2.5" height="2.5" fill="#f4f4f8"/>
+  <rect x="5" y="16.5" width="2.5" height="2.5" fill="#f4f4f8"/>
+  <rect x="9" y="16.5" width="2.5" height="2.5" fill="#ffb020"/>
+  <rect x="16.5" y="16.5" width="2.5" height="2.5" fill="#f4f4f8"/>
+  <rect x="13" y="13" width="2.5" height="2.5" fill="#ffb020"/>
+</svg>
