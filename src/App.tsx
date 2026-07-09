@@ -14,7 +14,7 @@ export default function App() {
               <span className="finder" />
             </span>
             <span className="brand-name">
-              QR<span className="brand-accent">LAB</span>
+              QR<span className="brand-accent">Generator</span>
             </span>
           </div>
           <div className="status">
@@ -33,7 +33,7 @@ export default function App() {
 
       <footer className="footer">
         <span className="footer-rule" />
-        QRLab by Kingsley Chen
+        QRGenerator by Kingsley Chen
       </footer>
     </div>
   )

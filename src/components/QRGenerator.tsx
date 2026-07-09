@@ -45,7 +45,7 @@ export default function QRGenerator() {
     const url = canvas.toDataURL('image/png')
     const link = document.createElement('a')
     link.href = url
-    link.download = 'qrlab-qrcode.png'
+    link.download = 'qrgenerator-qrcode.png'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)

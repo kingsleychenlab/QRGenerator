@@ -1,5 +1,5 @@
 {
-  "name": "qrlab",
+  "name": "qrgenerator",
   "version": "1.0.0",
   "description": "A clean, fast QR code generator web app by Kingsley Chen.",
   "private": true,

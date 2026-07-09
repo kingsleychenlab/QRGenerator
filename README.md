@@ -1,86 +1,84 @@
-# QRLab
+# QRGenerator
 
-A precision QR code studio. Type any text or URL and instantly get a scannable QR
-code you can customize, download, and copy — no accounts, no backend, no tracking.
+A fast, polished QR code generator. Type any text or URL and get a scannable QR
+code you can style, download, and copy — no accounts, no backend, no tracking.
 
-QRLab is styled as a dark "instrument" console: a live viewfinder frames the code
-with a scanner reticle and a sweep animation, and a monospace readout reports the
-encoder status in real time.
+Styled as a dark instrument console: a live viewfinder frames the code with a
+scanner reticle, and a monospace readout reports the encoder status as you type.
 
-> **QRLab by Kingsley Chen**
+<p align="center">
+  <img src="docs/screenshot-desktop.png" alt="QRGenerator on desktop" width="720">
+</p>
 
 ## Features
 
-- **Live preview** — the QR code updates the moment you type.
-- **Download as PNG** — one click saves a high-quality image.
-- **Copy to clipboard** — copy the QR image directly (in supported browsers).
-- **Customization**
-  - Adjustable size (120–480px)
-  - Foreground color
-  - Background color
-  - Error correction level (Low / Medium / Quartile / High)
-- **Input validation** — actions stay disabled until you enter something.
-- **Reset** — clear everything back to defaults in one click.
+- **Live preview** — the code re-renders the moment you type.
+- **Download as PNG** — one click saves a crisp image.
+- **Copy to clipboard** — copy the image directly (where the browser supports it).
+- **Customize** — size (120–480px), foreground color, background color, and error
+  correction level (Low / Medium / Quartile / High).
+- **Input validation** — actions stay disabled until there's something to encode.
+- **Reset** — return everything to defaults in one click.
 - **Responsive** — side-by-side on desktop, stacked on mobile.
-- **Scannable output** — uses the well-tested `qrcode.react` renderer with a quiet
-  zone margin so codes scan reliably.
+- **Accessible** — keyboard-friendly, visible focus, and reduced-motion support.
 
 ## Tech stack
 
-- [React](https://react.dev/) + [Vite](https://vite.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- Plain CSS (no framework), with Space Grotesk + Space Mono for type
-- [`qrcode.react`](https://github.com/zpao/qrcode.react) for QR rendering
+| Layer | Choice |
+| ----- | ------ |
+| Framework | [React](https://react.dev/) + [Vite](https://vite.dev/) |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Styling | Plain CSS · Space Grotesk + Space Mono |
+| QR engine | [`qrcode.react`](https://github.com/zpao/qrcode.react) |
 
 No backend, no paid APIs.
 
 ## Getting started
 
-Requires [Node.js](https://nodejs.org/) 18+.
+Requires [Node.js](https://nodejs.org/) 18 or newer.
 
 ```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start the dev server
-npm run dev
+npm install    # install dependencies
+npm run dev    # start the dev server
 ```
 
 Then open the URL Vite prints (usually http://localhost:5173).
 
-### Other scripts
-
-```bash
-npm run build     # Type-check and build for production (outputs to dist/)
-npm run preview   # Preview the production build locally
-```
+| Script | Does |
+| ------ | ---- |
+| `npm run dev` | Start the local dev server |
+| `npm run build` | Type-check and build for production (`dist/`) |
+| `npm run preview` | Preview the production build locally |
 
 ## Project structure
 
 ```
 src/
-  App.tsx                  # Layout, header, footer
   main.tsx                 # React entry point
+  App.tsx                  # Shell: topbar, tagline, footer
   components/
-    QRGenerator.tsx        # Input, controls, live preview, and actions
+    QRGenerator.tsx        # Controls, live preview, and actions
   styles/
-    index.css              # All app styling
+    index.css              # All styling
 ```
 
-## How the QR code stays scannable
+## Keeping codes scannable
 
-- Rendering is handled by `qrcode.react`, a mature library implementing the QR spec.
-- A margin (quiet zone) is kept around the code so scanners can find it.
-- Raising the **error correction level** adds redundancy — helpful if you plan to
-  print small or use custom colors. For best results keep good contrast between the
-  foreground and background colors.
+- Rendering uses `qrcode.react`, a mature implementation of the QR spec.
+- A quiet-zone margin is kept around the code so scanners can lock onto it.
+- Raising the error correction level adds redundancy — useful for small prints or
+  custom colors. Keep strong contrast between foreground and background.
 
 ## Screenshots
 
 | Desktop | Mobile |
 | ------- | ------ |
-| ![Desktop view](docs/screenshot-desktop.png) | ![Mobile view](docs/screenshot-mobile.png) |
+| <img src="docs/screenshot-desktop.png" alt="Desktop view" width="380"> | <img src="docs/screenshot-mobile.png" alt="Mobile view" width="200"> |
 
 ## License
 
 MIT — free to use and modify.
+
+---
+
+<p align="center"><sub>QRGenerator by Kingsley Chen</sub></p>
